@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace BeautyRoom
 {
@@ -17,33 +16,27 @@ namespace BeautyRoom
         public Form1()
         {
             InitializeComponent();
-<<<<<<< HEAD
             mainWindow = new MainWindow();
+            form3 = new Form3();
         }
         MainWindow mainWindow;
+        Form3 form3;
 
-        string path = @"D:\Дз_Программы\BeautyRoom\User.txt";
+        string path = @"User.txt";
+        string admin = @"Admin.txt";
+        
         private void gunaButton1_Click(object sender, EventArgs e)
         {
+       
             string name = NameTextBox.Text;
             string number = NumberTextBox.Text;
             string password = PasswordTextBox.Text;
-=======
-            form2 = new Form3(); 
-        }
-        Form3 form2;
-       
-
-        string path = @"User.txt";
-        private void gunaButton1_Click(object sender, EventArgs e)
-        {
-            string name = gunaTextBox1.Text;
-            string number = gunaTextBox3.Text;
-            string password = gunaTextBox2.Text;
->>>>>>> Привязка к окнам пользователя и админа
             bool correctName = false;
             bool correctNumber = false;
             bool correctPassword = false;
+            bool adminCorrectName = false;
+            bool adminCorrectNumber = false;
+            bool adminCorrectPassword = false;
 
             string[] line = File.ReadAllLines(path);
             for (int i = 0; i < line.Length; i++)
@@ -62,36 +55,45 @@ namespace BeautyRoom
                 }
 
             }
+
+            string[] lines = File.ReadAllLines(admin);
+            for(int i = 0; i < lines.Length; i++)
+            {
+                if(name == lines[i])
+                {
+                    adminCorrectName = true;
+                }
+                if(number == lines[i])
+                {
+                    adminCorrectNumber = true;
+                }
+                if(password == lines[i])
+                {
+                    adminCorrectPassword = true;
+                }
+            }
+            if(adminCorrectName == true && adminCorrectNumber == true && adminCorrectPassword == true)
+            {
+                form3.Show(); 
+            }
+
             if (correctName == true && correctNumber == true && correctPassword == true)
             {
-<<<<<<< HEAD
                 mainWindow.Show(); ;
             }
-            else
-            {
-                MessageBox.Show("Ошибка! Проверьте введные данные!","Ошибка авторизации");
-            }
-        }
 
-        private void gunaTextBox1_TextChanged(object sender, EventArgs e)
-=======
-                form2.Show(); ;
-            }
-            else
+            else if (correctName == false &&  correctNumber == false && correctPassword == false)
             {
                 MessageBox.Show("Ошибка! Проверьте введные данные!", "Ошибка авторизации");
             }
+            
         }
 
-       
-
-        private void Form1_Load(object sender, EventArgs e)
->>>>>>> Привязка к окнам пользователя и админа
+        private void gunaTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-<<<<<<< HEAD
         private void SignUpButton_Click(object sender, EventArgs e)
         {
             using (StreamWriter stream = new StreamWriter(path, true))
@@ -99,19 +101,13 @@ namespace BeautyRoom
                 stream.WriteLine(NameTextBox.Text);
                 stream.WriteLine(NumberTextBox.Text);
                 stream.WriteLine(PasswordTextBox.Text);
-=======
-      
-
-        private void gunaButton2_Click(object sender, EventArgs e)
-        {
-            using (StreamWriter stream = new StreamWriter(path, true))
-            {
-                stream.WriteLine(gunaTextBox1.Text);
-                stream.WriteLine(gunaTextBox3.Text);
-                stream.WriteLine(gunaTextBox2.Text);
-                MessageBox.Show("Пользователь успешно зарегестрирован");
->>>>>>> Привязка к окнам пользователя и админа
+                MessageBox.Show("Данные успешно сохранены!", "Регистрация");
             }
+        }
+
+        private void NumberTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

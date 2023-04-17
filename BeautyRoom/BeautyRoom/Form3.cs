@@ -36,7 +36,7 @@ namespace BeautyRoom
 
         private void gunaButton3_Click(object sender, EventArgs e)
         {
-            conteiner(new Masters());
+            
 
         }
         private void conteiner(object _form) {
@@ -52,7 +52,7 @@ namespace BeautyRoom
 
         private void gunaButton2_Click(object sender, EventArgs e)
         {
-            conteiner2(new Service());
+           
         }
         private void conteiner2(object _form)
         {
@@ -68,7 +68,7 @@ namespace BeautyRoom
 
         private void gunaButton1_Click(object sender, EventArgs e)
         {
-            conteiner3(new Date());
+        
         }
         private void conteiner3(object _form)
         {
@@ -80,6 +80,11 @@ namespace BeautyRoom
             gunaPanel3.Controls.Add(fm);
             gunaPanel3.Tag = fm;
             fm.Show();
+        }
+
+        private void gunaPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

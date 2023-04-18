@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaButton_choose_service = new Guna.UI.WinForms.GunaButton();
             this.gunaButton_check_master = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel2_top = new Guna.UI.WinForms.GunaPanel();
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.gunaDragControl2 = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +55,28 @@
             this.gunaPanel1.Size = new System.Drawing.Size(272, 707);
             this.gunaPanel1.TabIndex = 0;
             this.gunaPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gunaPanel1_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("PMingLiU-ExtB", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Maroon;
+            this.label2.Location = new System.Drawing.Point(25, 122);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(208, 37);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "BeautyRoom";
+            // 
+            // gunaPictureBox2
+            // 
+            this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox2.Image")));
+            this.gunaPictureBox2.Location = new System.Drawing.Point(76, 3);
+            this.gunaPictureBox2.Name = "gunaPictureBox2";
+            this.gunaPictureBox2.Size = new System.Drawing.Size(106, 100);
+            this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.gunaPictureBox2.TabIndex = 6;
+            this.gunaPictureBox2.TabStop = false;
             // 
             // gunaButton_choose_service
             // 
@@ -79,6 +101,7 @@
             this.gunaButton_choose_service.Size = new System.Drawing.Size(270, 50);
             this.gunaButton_choose_service.TabIndex = 2;
             this.gunaButton_choose_service.Text = "         Выбрать Услугу";
+            this.gunaButton_choose_service.Click += new System.EventHandler(this.gunaButton_choose_service_Click);
             // 
             // gunaButton_check_master
             // 
@@ -122,28 +145,6 @@
             // gunaDragControl2
             // 
             this.gunaDragControl2.TargetControl = this.gunaPanel2_top;
-            // 
-            // gunaPictureBox2
-            // 
-            this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox2.Image")));
-            this.gunaPictureBox2.Location = new System.Drawing.Point(76, 3);
-            this.gunaPictureBox2.Name = "gunaPictureBox2";
-            this.gunaPictureBox2.Size = new System.Drawing.Size(106, 100);
-            this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.gunaPictureBox2.TabIndex = 6;
-            this.gunaPictureBox2.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("PMingLiU-ExtB", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(25, 122);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(208, 37);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "BeautyRoom";
             // 
             // MainWindow
             // 

@@ -31,5 +31,10 @@ namespace BeautyRoom
         {
 
         }
+
+        private void gunaButton_choose_service_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

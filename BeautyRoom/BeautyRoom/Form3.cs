@@ -22,7 +22,9 @@ namespace BeautyRoom
             InitializeComponent();
         }
         DataTable table = new DataTable();
-       
+        int selectedRow;
+
+
         private void Form3_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
@@ -38,8 +40,9 @@ namespace BeautyRoom
 
         private void gunaButton3_Click(object sender, EventArgs e)
         {
-
-
+            DataGridViewRow newRow;
+            table.Rows.Add(textBoxId.Text,textBoxName.Text,textBoxMaster.Text,textBoxPrise.Text,textBoxDate.Text);
+            dataGridView1.DataSource = table;
         }
         /* private void conteiner(object _form) {
              if(gunaPanel3.Controls.Count>0) gunaPanel3.Controls.Clear();
@@ -75,10 +78,11 @@ namespace BeautyRoom
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            table.Columns.Add("Номер", typeof(int));
-            table.Columns.Add("Имя", typeof(string));
-            table.Columns.Add("Фамилия", typeof(string));
-            table.Columns.Add("Должность", typeof(string));
+            table.Columns.Add("Id", typeof(int));
+            table.Columns.Add("Название", typeof(string));
+            table.Columns.Add("Имя Мастера", typeof(string));
+            table.Columns.Add("Цена", typeof(int));
+            table.Columns.Add("Дата ", typeof(string));
             dataGridView1.DataSource = table;
 
         }
@@ -97,19 +101,57 @@ namespace BeautyRoom
             }
 
         }
-       
 
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
 
+        }
 
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            selectedRow = dataGridView1.CurrentCell.RowIndex;
+            dataGridView1.Rows.RemoveAt(selectedRow);
+           
 
+        }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectedRow = e.RowIndex;
+            DataGridViewRow row = dataGridView1.Rows[selectedRow];
+            textBoxId.Text = row.Cells[0].Value.ToString();
+            textBoxName.Text = row.Cells[1].Value.ToString();
+            textBoxMaster.Text = row.Cells[2].Value.ToString();
+            textBoxPrise.Text = row.Cells[3].Value.ToString();
+            textBoxDate.Text = row.Cells[4].Value.ToString();
 
+        }
 
+        private void UpDateButton_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow newDataRow = dataGridView1.Rows[selectedRow];
+            newDataRow.Cells[0].Value = textBoxId.Text;
+            newDataRow.Cells[1].Value = textBoxName.Text;
+            newDataRow.Cells[2].Value = textBoxMaster.Text;
+            newDataRow.Cells[3].Value = textBoxPrise.Text;
+            newDataRow.Cells[4].Value = textBoxDate.Text;
+        }
 
-
-
-
-
+        private void gunaButtonSave_Click(object sender, EventArgs e)
+        {
+            TextWriter writer = new StreamWriter("Masters.txt");
+            for (int i = 0; i < dataGridView1.Rows.Count -1 ; i++) {
+                for (int j = 0; j < dataGridView1.Columns.Count; j++) {
+                    if (j ==dataGridView1.Columns.Count -1)
+                        writer.Write(dataGridView1.Rows[i].Cells[j].Value.ToString());
+                    else
+                        writer.Write(dataGridView1.Rows[i].Cells[j].Value.ToString()+ "/" );
+                }
+                writer.WriteLine(" ");
+            }
+            writer.Close();
+            MessageBox.Show("Данные сохранены"); 
+        }
     }
     }
     

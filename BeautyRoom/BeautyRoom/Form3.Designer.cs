@@ -32,7 +32,7 @@
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
             this.showButton = new Guna.UI.WinForms.GunaButton();
-            this.saveButton = new Guna.UI.WinForms.GunaButton();
+            this.UpDateButton = new Guna.UI.WinForms.GunaButton();
             this.deleteButton = new Guna.UI.WinForms.GunaButton();
             this.label2 = new System.Windows.Forms.Label();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
@@ -43,6 +43,12 @@
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel2_top = new Guna.UI.WinForms.GunaPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBoxId = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxMaster = new System.Windows.Forms.TextBox();
+            this.textBoxPrise = new System.Windows.Forms.TextBox();
+            this.textBoxDate = new System.Windows.Forms.TextBox();
+            this.gunaButtonSave = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel1.SuspendLayout();
             this.gunaPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
@@ -67,8 +73,9 @@
             // gunaPanel2
             // 
             this.gunaPanel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.gunaPanel2.Controls.Add(this.gunaButtonSave);
             this.gunaPanel2.Controls.Add(this.showButton);
-            this.gunaPanel2.Controls.Add(this.saveButton);
+            this.gunaPanel2.Controls.Add(this.UpDateButton);
             this.gunaPanel2.Controls.Add(this.deleteButton);
             this.gunaPanel2.Controls.Add(this.label2);
             this.gunaPanel2.Controls.Add(this.gunaPictureBox2);
@@ -93,7 +100,7 @@
             this.showButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.showButton.Image = null;
             this.showButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.showButton.Location = new System.Drawing.Point(0, 189);
+            this.showButton.Location = new System.Drawing.Point(3, 168);
             this.showButton.Name = "showButton";
             this.showButton.OnHoverBaseColor = System.Drawing.Color.RosyBrown;
             this.showButton.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -106,30 +113,31 @@
             this.showButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.showButton.Click += new System.EventHandler(this.showButton_Click);
             // 
-            // saveButton
+            // UpDateButton
             // 
-            this.saveButton.AnimationHoverSpeed = 0.07F;
-            this.saveButton.AnimationSpeed = 0.03F;
-            this.saveButton.BaseColor = System.Drawing.Color.Maroon;
-            this.saveButton.BorderColor = System.Drawing.Color.Black;
-            this.saveButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.saveButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.saveButton.FocusedColor = System.Drawing.Color.Empty;
-            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.saveButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.saveButton.Image = null;
-            this.saveButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.saveButton.Location = new System.Drawing.Point(-1, 445);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.OnHoverBaseColor = System.Drawing.Color.RosyBrown;
-            this.saveButton.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.saveButton.OnHoverForeColor = System.Drawing.Color.WhiteSmoke;
-            this.saveButton.OnHoverImage = null;
-            this.saveButton.OnPressedColor = System.Drawing.Color.Black;
-            this.saveButton.Size = new System.Drawing.Size(270, 50);
-            this.saveButton.TabIndex = 10;
-            this.saveButton.Text = "Сохранить Мастера";
-            this.saveButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.UpDateButton.AnimationHoverSpeed = 0.07F;
+            this.UpDateButton.AnimationSpeed = 0.03F;
+            this.UpDateButton.BaseColor = System.Drawing.Color.Maroon;
+            this.UpDateButton.BorderColor = System.Drawing.Color.Black;
+            this.UpDateButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UpDateButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.UpDateButton.FocusedColor = System.Drawing.Color.Empty;
+            this.UpDateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.UpDateButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.UpDateButton.Image = null;
+            this.UpDateButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.UpDateButton.Location = new System.Drawing.Point(-1, 445);
+            this.UpDateButton.Name = "UpDateButton";
+            this.UpDateButton.OnHoverBaseColor = System.Drawing.Color.RosyBrown;
+            this.UpDateButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.UpDateButton.OnHoverForeColor = System.Drawing.Color.WhiteSmoke;
+            this.UpDateButton.OnHoverImage = null;
+            this.UpDateButton.OnPressedColor = System.Drawing.Color.Black;
+            this.UpDateButton.Size = new System.Drawing.Size(270, 50);
+            this.UpDateButton.TabIndex = 10;
+            this.UpDateButton.Text = "Изменить Мастера";
+            this.UpDateButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.UpDateButton.Click += new System.EventHandler(this.UpDateButton_Click);
             // 
             // deleteButton
             // 
@@ -155,6 +163,7 @@
             this.deleteButton.TabIndex = 9;
             this.deleteButton.Text = "Удалить Мастера";
             this.deleteButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // label2
             // 
@@ -192,7 +201,7 @@
             this.addButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.addButton.Image = null;
             this.addButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.addButton.Location = new System.Drawing.Point(-1, 272);
+            this.addButton.Location = new System.Drawing.Point(0, 245);
             this.addButton.Name = "addButton";
             this.addButton.OnHoverBaseColor = System.Drawing.Color.RosyBrown;
             this.addButton.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -299,18 +308,87 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(409, 149);
+            this.dataGridView1.Location = new System.Drawing.Point(335, 199);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(588, 296);
+            this.dataGridView1.Size = new System.Drawing.Size(713, 296);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // textBoxId
+            // 
+            this.textBoxId.Location = new System.Drawing.Point(368, 113);
+            this.textBoxId.Name = "textBoxId";
+            this.textBoxId.Size = new System.Drawing.Size(100, 22);
+            this.textBoxId.TabIndex = 4;
+            // 
+            // textBoxName
+            // 
+            this.textBoxName.Location = new System.Drawing.Point(529, 113);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(100, 22);
+            this.textBoxName.TabIndex = 5;
+            // 
+            // textBoxMaster
+            // 
+            this.textBoxMaster.Location = new System.Drawing.Point(709, 113);
+            this.textBoxMaster.Name = "textBoxMaster";
+            this.textBoxMaster.Size = new System.Drawing.Size(100, 22);
+            this.textBoxMaster.TabIndex = 6;
+            this.textBoxMaster.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // textBoxPrise
+            // 
+            this.textBoxPrise.Location = new System.Drawing.Point(909, 113);
+            this.textBoxPrise.Name = "textBoxPrise";
+            this.textBoxPrise.Size = new System.Drawing.Size(100, 22);
+            this.textBoxPrise.TabIndex = 7;
+            // 
+            // textBoxDate
+            // 
+            this.textBoxDate.Location = new System.Drawing.Point(637, 162);
+            this.textBoxDate.Name = "textBoxDate";
+            this.textBoxDate.Size = new System.Drawing.Size(100, 22);
+            this.textBoxDate.TabIndex = 8;
+            // 
+            // gunaButtonSave
+            // 
+            this.gunaButtonSave.Animated = true;
+            this.gunaButtonSave.AnimationHoverSpeed = 0.07F;
+            this.gunaButtonSave.AnimationSpeed = 0.03F;
+            this.gunaButtonSave.BaseColor = System.Drawing.Color.Maroon;
+            this.gunaButtonSave.BorderColor = System.Drawing.Color.Black;
+            this.gunaButtonSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaButtonSave.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButtonSave.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButtonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gunaButtonSave.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.gunaButtonSave.Image = null;
+            this.gunaButtonSave.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButtonSave.Location = new System.Drawing.Point(-1, 301);
+            this.gunaButtonSave.Name = "gunaButtonSave";
+            this.gunaButtonSave.OnHoverBaseColor = System.Drawing.Color.RosyBrown;
+            this.gunaButtonSave.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButtonSave.OnHoverForeColor = System.Drawing.Color.WhiteSmoke;
+            this.gunaButtonSave.OnHoverImage = null;
+            this.gunaButtonSave.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButtonSave.Size = new System.Drawing.Size(270, 50);
+            this.gunaButtonSave.TabIndex = 12;
+            this.gunaButtonSave.Text = "Сохранить Мастера";
+            this.gunaButtonSave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButtonSave.Click += new System.EventHandler(this.gunaButtonSave_Click);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 575);
+            this.Controls.Add(this.textBoxDate);
+            this.Controls.Add(this.textBoxPrise);
+            this.Controls.Add(this.textBoxMaster);
+            this.Controls.Add(this.textBoxName);
+            this.Controls.Add(this.textBoxId);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gunaPanel2_top);
             this.Controls.Add(this.gunaPanel1);
@@ -328,6 +406,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -343,9 +422,15 @@
         private Guna.UI.WinForms.GunaPanel gunaPanel2_top;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox2;
         private System.Windows.Forms.Label label2;
-        private Guna.UI.WinForms.GunaButton saveButton;
+        private Guna.UI.WinForms.GunaButton UpDateButton;
         private Guna.UI.WinForms.GunaButton deleteButton;
         private Guna.UI.WinForms.GunaButton showButton;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBoxId;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxMaster;
+        private System.Windows.Forms.TextBox textBoxPrise;
+        private System.Windows.Forms.TextBox textBoxDate;
+        private Guna.UI.WinForms.GunaButton gunaButtonSave;
     }
 }

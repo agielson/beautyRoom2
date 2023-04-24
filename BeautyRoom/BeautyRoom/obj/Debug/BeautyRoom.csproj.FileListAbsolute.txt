@@ -19,7 +19,6 @@ C:\Users\Галия\source\repos\BeautyRoom\BeautyRoom\obj\Debug\BeautyRoom.Date
 D:\beautyRoom2\BeautyRoom\BeautyRoom\obj\Debug\BeautyRoom.csproj.AssemblyReference.cache
 D:\beautyRoom2\BeautyRoom\BeautyRoom\obj\Debug\BeautyRoom.csproj.SuggestedBindingRedirects.cache
 D:\beautyRoom2\BeautyRoom\BeautyRoom\obj\Debug\BeautyRoom.Form1.resources
-D:\beautyRoom2\BeautyRoom\BeautyRoom\obj\Debug\BeautyRoom.MainWindow.resources
 D:\beautyRoom2\BeautyRoom\BeautyRoom\obj\Debug\BeautyRoom.Form3.resources
 D:\beautyRoom2\BeautyRoom\BeautyRoom\obj\Debug\BeautyRoom.Properties.Resources.resources
 D:\beautyRoom2\BeautyRoom\BeautyRoom\obj\Debug\BeautyRoom.csproj.GenerateResource.cache
@@ -32,3 +31,5 @@ D:\beautyRoom2\BeautyRoom\BeautyRoom\bin\Debug\BeautyRoom.pdb
 D:\beautyRoom2\BeautyRoom\BeautyRoom\bin\Debug\Guna.UI.dll
 D:\beautyRoom2\BeautyRoom\BeautyRoom\bin\Debug\Guna.UI2.dll
 D:\beautyRoom2\BeautyRoom\BeautyRoom\obj\Debug\BeautyRoom.csproj.CopyComplete
+D:\beautyRoom2\BeautyRoom\BeautyRoom\obj\Debug\BeautyRoom.Form2.resources
+D:\beautyRoom2\BeautyRoom\BeautyRoom\obj\Debug\BeautyRoom.Form4.resources

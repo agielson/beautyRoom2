@@ -16,18 +16,18 @@ namespace BeautyRoom
         public Form1()
         {
             InitializeComponent();
-            mainWindow = new MainWindow();
+            form2 = new Form2();
             form3 = new Form3();
         }
-        MainWindow mainWindow;
+        Form2 form2;
         Form3 form3;
 
         string path = @"User.txt";
         string admin = @"Admin.txt";
-        
+
         private void gunaButton1_Click(object sender, EventArgs e)
         {
-       
+
             string name = NameTextBox.Text;
             string number = NumberTextBox.Text;
             string password = PasswordTextBox.Text;
@@ -57,36 +57,36 @@ namespace BeautyRoom
             }
 
             string[] lines = File.ReadAllLines(admin);
-            for(int i = 0; i < lines.Length; i++)
+            for (int i = 0; i < lines.Length; i++)
             {
-                if(name == lines[i])
+                if (name == lines[i])
                 {
                     adminCorrectName = true;
                 }
-                if(number == lines[i])
+                if (number == lines[i])
                 {
                     adminCorrectNumber = true;
                 }
-                if(password == lines[i])
+                if (password == lines[i])
                 {
                     adminCorrectPassword = true;
                 }
             }
-            if(adminCorrectName == true && adminCorrectNumber == true && adminCorrectPassword == true)
+            if (adminCorrectName == true && adminCorrectNumber == true && adminCorrectPassword == true)
             {
-                form3.Show(); 
+                form3.Show();
             }
 
             if (correctName == true && correctNumber == true && correctPassword == true)
             {
-                mainWindow.Show(); ;
+                form2.Show(); ;
             }
 
-            else if (correctName == false &&  correctNumber == false && correctPassword == false)
+            else if (correctName == false && correctNumber == false && correctPassword == false)
             {
                 MessageBox.Show("Ошибка! Проверьте введные данные!", "Ошибка авторизации");
             }
-            
+
         }
 
         private void gunaTextBox1_TextChanged(object sender, EventArgs e)
@@ -110,9 +110,6 @@ namespace BeautyRoom
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }

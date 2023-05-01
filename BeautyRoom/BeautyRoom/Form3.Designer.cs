@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
+            this.gunaButtonSave = new Guna.UI.WinForms.GunaButton();
             this.showButton = new Guna.UI.WinForms.GunaButton();
             this.UpDateButton = new Guna.UI.WinForms.GunaButton();
             this.deleteButton = new Guna.UI.WinForms.GunaButton();
@@ -48,7 +49,11 @@
             this.textBoxMaster = new System.Windows.Forms.TextBox();
             this.textBoxPrise = new System.Windows.Forms.TextBox();
             this.textBoxDate = new System.Windows.Forms.TextBox();
-            this.gunaButtonSave = new Guna.UI.WinForms.GunaButton();
+            this.id_label = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.gunaPanel1.SuspendLayout();
             this.gunaPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
@@ -85,6 +90,33 @@
             this.gunaPanel2.Name = "gunaPanel2";
             this.gunaPanel2.Size = new System.Drawing.Size(272, 575);
             this.gunaPanel2.TabIndex = 4;
+            // 
+            // gunaButtonSave
+            // 
+            this.gunaButtonSave.Animated = true;
+            this.gunaButtonSave.AnimationHoverSpeed = 0.07F;
+            this.gunaButtonSave.AnimationSpeed = 0.03F;
+            this.gunaButtonSave.BaseColor = System.Drawing.Color.Maroon;
+            this.gunaButtonSave.BorderColor = System.Drawing.Color.Black;
+            this.gunaButtonSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaButtonSave.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButtonSave.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButtonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gunaButtonSave.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.gunaButtonSave.Image = null;
+            this.gunaButtonSave.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButtonSave.Location = new System.Drawing.Point(-1, 301);
+            this.gunaButtonSave.Name = "gunaButtonSave";
+            this.gunaButtonSave.OnHoverBaseColor = System.Drawing.Color.RosyBrown;
+            this.gunaButtonSave.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButtonSave.OnHoverForeColor = System.Drawing.Color.WhiteSmoke;
+            this.gunaButtonSave.OnHoverImage = null;
+            this.gunaButtonSave.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButtonSave.Size = new System.Drawing.Size(270, 50);
+            this.gunaButtonSave.TabIndex = 12;
+            this.gunaButtonSave.Text = "Сохранить Мастера";
+            this.gunaButtonSave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButtonSave.Click += new System.EventHandler(this.gunaButtonSave_Click);
             // 
             // showButton
             // 
@@ -308,6 +340,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.Location = new System.Drawing.Point(335, 199);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -332,7 +365,7 @@
             // 
             // textBoxMaster
             // 
-            this.textBoxMaster.Location = new System.Drawing.Point(709, 113);
+            this.textBoxMaster.Location = new System.Drawing.Point(737, 113);
             this.textBoxMaster.Name = "textBoxMaster";
             this.textBoxMaster.Size = new System.Drawing.Size(100, 22);
             this.textBoxMaster.TabIndex = 6;
@@ -352,38 +385,72 @@
             this.textBoxDate.Size = new System.Drawing.Size(100, 22);
             this.textBoxDate.TabIndex = 8;
             // 
-            // gunaButtonSave
+            // id_label
             // 
-            this.gunaButtonSave.Animated = true;
-            this.gunaButtonSave.AnimationHoverSpeed = 0.07F;
-            this.gunaButtonSave.AnimationSpeed = 0.03F;
-            this.gunaButtonSave.BaseColor = System.Drawing.Color.Maroon;
-            this.gunaButtonSave.BorderColor = System.Drawing.Color.Black;
-            this.gunaButtonSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaButtonSave.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButtonSave.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButtonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.gunaButtonSave.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.gunaButtonSave.Image = null;
-            this.gunaButtonSave.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButtonSave.Location = new System.Drawing.Point(-1, 301);
-            this.gunaButtonSave.Name = "gunaButtonSave";
-            this.gunaButtonSave.OnHoverBaseColor = System.Drawing.Color.RosyBrown;
-            this.gunaButtonSave.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButtonSave.OnHoverForeColor = System.Drawing.Color.WhiteSmoke;
-            this.gunaButtonSave.OnHoverImage = null;
-            this.gunaButtonSave.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButtonSave.Size = new System.Drawing.Size(270, 50);
-            this.gunaButtonSave.TabIndex = 12;
-            this.gunaButtonSave.Text = "Сохранить Мастера";
-            this.gunaButtonSave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButtonSave.Click += new System.EventHandler(this.gunaButtonSave_Click);
+            this.id_label.AutoSize = true;
+            this.id_label.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.id_label.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.id_label.Location = new System.Drawing.Point(375, 87);
+            this.id_label.Name = "id_label";
+            this.id_label.Size = new System.Drawing.Size(81, 23);
+            this.id_label.TabIndex = 9;
+            this.id_label.Text = "Номер";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(918, 87);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 23);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Цена";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(747, 87);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 23);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Мастер";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(656, 136);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 23);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Дата";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(538, 87);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 23);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Услуга";
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 575);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.id_label);
             this.Controls.Add(this.textBoxDate);
             this.Controls.Add(this.textBoxPrise);
             this.Controls.Add(this.textBoxMaster);
@@ -432,5 +499,10 @@
         private System.Windows.Forms.TextBox textBoxPrise;
         private System.Windows.Forms.TextBox textBoxDate;
         private Guna.UI.WinForms.GunaButton gunaButtonSave;
+        private System.Windows.Forms.Label id_label;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

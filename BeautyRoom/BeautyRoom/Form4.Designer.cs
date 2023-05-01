@@ -56,6 +56,7 @@
             this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaButton1.ForeColor = System.Drawing.Color.White;
             this.gunaButton1.Image = null;
+            this.gunaButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton1.Location = new System.Drawing.Point(248, 298);
             this.gunaButton1.Name = "gunaButton1";
@@ -67,6 +68,7 @@
             this.gunaButton1.Size = new System.Drawing.Size(160, 42);
             this.gunaButton1.TabIndex = 1;
             this.gunaButton1.Text = "Открыть записи";
+            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // Form4
@@ -76,6 +78,7 @@
             this.ClientSize = new System.Drawing.Size(693, 351);
             this.Controls.Add(this.gunaButton1);
             this.Controls.Add(this.dataGridView2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Мои записи";
@@ -89,7 +92,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView2;
         private Guna.UI.WinForms.GunaButton gunaButton1;
-
     }
 
 }

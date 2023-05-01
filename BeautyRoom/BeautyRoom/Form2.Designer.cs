@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.gunaCheckBox1 = new Guna.UI.WinForms.GunaCheckBox();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
@@ -101,7 +102,7 @@
             // 
             this.gunaLabel6.AutoSize = true;
             this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel6.Location = new System.Drawing.Point(123, 416);
+            this.gunaLabel6.Location = new System.Drawing.Point(139, 416);
             this.gunaLabel6.Name = "gunaLabel6";
             this.gunaLabel6.Size = new System.Drawing.Size(41, 20);
             this.gunaLabel6.TabIndex = 20;
@@ -111,7 +112,7 @@
             // 
             this.gunaLabel5.AutoSize = true;
             this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel5.Location = new System.Drawing.Point(130, 353);
+            this.gunaLabel5.Location = new System.Drawing.Point(139, 353);
             this.gunaLabel5.Name = "gunaLabel5";
             this.gunaLabel5.Size = new System.Drawing.Size(45, 20);
             this.gunaLabel5.TabIndex = 19;
@@ -121,7 +122,7 @@
             // 
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel4.Location = new System.Drawing.Point(121, 285);
+            this.gunaLabel4.Location = new System.Drawing.Point(130, 285);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(60, 20);
             this.gunaLabel4.TabIndex = 18;
@@ -131,7 +132,7 @@
             // 
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel3.Location = new System.Drawing.Point(123, 208);
+            this.gunaLabel3.Location = new System.Drawing.Point(130, 213);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(54, 20);
             this.gunaLabel3.TabIndex = 17;
@@ -249,6 +250,7 @@
             this.gunaButton4.Size = new System.Drawing.Size(180, 35);
             this.gunaButton4.TabIndex = 10;
             this.gunaButton4.Text = "Каталог записей";
+            this.gunaButton4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton4.Click += new System.EventHandler(this.gunaButton4_Click);
             // 
             // gunaButton3
@@ -273,6 +275,7 @@
             this.gunaButton3.Size = new System.Drawing.Size(180, 35);
             this.gunaButton3.TabIndex = 9;
             this.gunaButton3.Text = "Выйти";
+            this.gunaButton3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton3.Click += new System.EventHandler(this.gunaButton3_Click);
             // 
             // gunaButton2
@@ -297,6 +300,7 @@
             this.gunaButton2.Size = new System.Drawing.Size(180, 35);
             this.gunaButton2.TabIndex = 8;
             this.gunaButton2.Text = "Записаться";
+            this.gunaButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton2.Click += new System.EventHandler(this.gunaButton2_Click);
             // 
             // gunaButton1
@@ -321,6 +325,7 @@
             this.gunaButton1.Size = new System.Drawing.Size(180, 35);
             this.gunaButton1.TabIndex = 7;
             this.gunaButton1.Text = "Мои записи";
+            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // gunaLabel1
@@ -354,9 +359,10 @@
             this.ClientSize = new System.Drawing.Size(1105, 620);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.gunaPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "BeutyRoom";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();

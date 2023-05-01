@@ -141,7 +141,8 @@ namespace BeautyRoom
             this.LoginButton.OnPressedColor = System.Drawing.Color.Black;
             this.LoginButton.Size = new System.Drawing.Size(272, 45);
             this.LoginButton.TabIndex = 8;
-            this.LoginButton.Text = "                      Войти";
+            this.LoginButton.Text = "Войти";
+            this.LoginButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.LoginButton.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // SignUpButton
@@ -166,6 +167,7 @@ namespace BeautyRoom
             this.SignUpButton.Size = new System.Drawing.Size(272, 45);
             this.SignUpButton.TabIndex = 10;
             this.SignUpButton.Text = "Нет аккуанта? Зарегистрируйтесь";
+            this.SignUpButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.SignUpButton.Click += new System.EventHandler(this.SignUpButton_Click);
             // 
             // NameTextBox
@@ -207,7 +209,6 @@ namespace BeautyRoom
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BeautyRoom";
-            
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
             this.ResumeLayout(false);

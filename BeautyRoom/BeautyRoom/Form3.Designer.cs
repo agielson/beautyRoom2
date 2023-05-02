@@ -244,7 +244,7 @@
             this.addButton.TabIndex = 1;
             this.addButton.Text = "Добавить Мастера";
             this.addButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.addButton.Click += new System.EventHandler(this.gunaButton3_Click);
+            
             // 
             // gunaButton_Chsoose_date
             // 
@@ -347,7 +347,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(713, 296);
             this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSelect_CellClick);
             // 
             // textBoxId
             // 
@@ -369,8 +369,7 @@
             this.textBoxMaster.Name = "textBoxMaster";
             this.textBoxMaster.Size = new System.Drawing.Size(100, 22);
             this.textBoxMaster.TabIndex = 6;
-            this.textBoxMaster.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
+                        // 
             // textBoxPrise
             // 
             this.textBoxPrise.Location = new System.Drawing.Point(909, 113);
@@ -465,7 +464,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BeautyRoom";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form3_FormClosing);
-            this.Load += new System.EventHandler(this.Form3_Load);
+            this.Load += new System.EventHandler(this.FormAdmin_Load);
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel2.ResumeLayout(false);
             this.gunaPanel2.PerformLayout();

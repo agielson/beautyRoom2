@@ -35,7 +35,7 @@ namespace BeautyRoom
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
-            this.LoginButton = new Guna.UI.WinForms.GunaButton();
+            this.LoginEnterButton = new Guna.UI.WinForms.GunaButton();
             this.SignUpButton = new Guna.UI.WinForms.GunaButton();
             this.NameTextBox = new Guna.UI.WinForms.GunaTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
@@ -52,6 +52,7 @@ namespace BeautyRoom
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gunaPictureBox1.TabIndex = 0;
             this.gunaPictureBox1.TabStop = false;
+            
             // 
             // NumberTextBox
             // 
@@ -69,8 +70,7 @@ namespace BeautyRoom
             this.NumberTextBox.Size = new System.Drawing.Size(258, 35);
             this.NumberTextBox.TabIndex = 1;
             this.NumberTextBox.Text = "Имя";
-            this.NumberTextBox.TextChanged += new System.EventHandler(this.NumberTextBox_TextChanged);
-            // 
+                       // 
             // PasswordTextBox
             // 
             this.PasswordTextBox.BaseColor = System.Drawing.Color.White;
@@ -120,30 +120,30 @@ namespace BeautyRoom
             this.gunaPictureBox2.TabIndex = 5;
             this.gunaPictureBox2.TabStop = false;
             // 
-            // LoginButton
+            // LoginEnterButton
             // 
-            this.LoginButton.AnimationHoverSpeed = 0.07F;
-            this.LoginButton.AnimationSpeed = 0.03F;
-            this.LoginButton.BaseColor = System.Drawing.Color.Maroon;
-            this.LoginButton.BorderColor = System.Drawing.Color.Black;
-            this.LoginButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.LoginButton.FocusedColor = System.Drawing.Color.Empty;
-            this.LoginButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.LoginButton.ForeColor = System.Drawing.Color.Snow;
-            this.LoginButton.Image = null;
-            this.LoginButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.LoginButton.Location = new System.Drawing.Point(61, 339);
-            this.LoginButton.Name = "LoginButton";
-            this.LoginButton.OnHoverBaseColor = System.Drawing.Color.Maroon;
-            this.LoginButton.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.LoginButton.OnHoverForeColor = System.Drawing.Color.White;
-            this.LoginButton.OnHoverImage = null;
-            this.LoginButton.OnPressedColor = System.Drawing.Color.Black;
-            this.LoginButton.Size = new System.Drawing.Size(272, 45);
-            this.LoginButton.TabIndex = 8;
-            this.LoginButton.Text = "Войти";
-            this.LoginButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.LoginButton.Click += new System.EventHandler(this.gunaButton1_Click);
+            this.LoginEnterButton.AnimationHoverSpeed = 0.07F;
+            this.LoginEnterButton.AnimationSpeed = 0.03F;
+            this.LoginEnterButton.BaseColor = System.Drawing.Color.Maroon;
+            this.LoginEnterButton.BorderColor = System.Drawing.Color.Black;
+            this.LoginEnterButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.LoginEnterButton.FocusedColor = System.Drawing.Color.Empty;
+            this.LoginEnterButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.LoginEnterButton.ForeColor = System.Drawing.Color.Snow;
+            this.LoginEnterButton.Image = null;
+            this.LoginEnterButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.LoginEnterButton.Location = new System.Drawing.Point(61, 339);
+            this.LoginEnterButton.Name = "LoginEnterButton";
+            this.LoginEnterButton.OnHoverBaseColor = System.Drawing.Color.Maroon;
+            this.LoginEnterButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.LoginEnterButton.OnHoverForeColor = System.Drawing.Color.White;
+            this.LoginEnterButton.OnHoverImage = null;
+            this.LoginEnterButton.OnPressedColor = System.Drawing.Color.Black;
+            this.LoginEnterButton.Size = new System.Drawing.Size(272, 45);
+            this.LoginEnterButton.TabIndex = 8;
+            this.LoginEnterButton.Text = "Войти";
+            this.LoginEnterButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LoginEnterButton.Click += new System.EventHandler(this.gunaButtonEnter_Click);
             // 
             // SignUpButton
             // 
@@ -186,7 +186,7 @@ namespace BeautyRoom
             this.NameTextBox.Size = new System.Drawing.Size(258, 35);
             this.NameTextBox.TabIndex = 11;
             this.NameTextBox.Text = "Номер телефона";
-            this.NameTextBox.TextChanged += new System.EventHandler(this.gunaTextBox1_TextChanged);
+            
             // 
             // Form1
             // 
@@ -196,7 +196,7 @@ namespace BeautyRoom
             this.ClientSize = new System.Drawing.Size(950, 519);
             this.Controls.Add(this.NameTextBox);
             this.Controls.Add(this.SignUpButton);
-            this.Controls.Add(this.LoginButton);
+            this.Controls.Add(this.LoginEnterButton);
             this.Controls.Add(this.gunaPictureBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -209,7 +209,7 @@ namespace BeautyRoom
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BeautyRoom";
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
+                        ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -224,7 +224,7 @@ namespace BeautyRoom
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox2;
-        private Guna.UI.WinForms.GunaButton LoginButton;
+        private Guna.UI.WinForms.GunaButton LoginEnterButton;
         private Guna.UI.WinForms.GunaButton SignUpButton;
         private Guna.UI.WinForms.GunaTextBox NameTextBox;
     }

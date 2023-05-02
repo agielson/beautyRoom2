@@ -26,7 +26,7 @@ namespace BeautyRoom
         DataTable table = new DataTable();
         int selectedRow;
 
-        public void Form2_Load(object sender, EventArgs e)
+        public void ShowTable_Load(object sender, EventArgs e)
         {
             table.Columns.Add("№", typeof(int));
             table.Columns.Add("Услуга", typeof(string));
@@ -37,7 +37,7 @@ namespace BeautyRoom
             dataGridView2.DataSource = table;
         }
 
-        public void gunaButton4_Click(object sender, EventArgs e)
+        public void ButtonShowInf_Click(object sender, EventArgs e)
         {
             string path = "Masters.txt";
 
@@ -57,7 +57,7 @@ namespace BeautyRoom
             }
         }
 
-        public void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        public void dataGridViewInTable_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
             DataGridViewRow selectedRow = dataGridView2.Rows[index];
@@ -69,7 +69,7 @@ namespace BeautyRoom
         }
 
 
-        private void gunaButton2_Click(object sender, EventArgs e)
+        private void ButtonWriteInUser_Click(object sender, EventArgs e)
         {
             string pathRecord = @"records.txt";
             using (StreamWriter stream = new StreamWriter(pathRecord, true))
@@ -82,13 +82,13 @@ namespace BeautyRoom
             }
         }
 
-        public void gunaButton1_Click(object sender, EventArgs e)
+        public void ButtonMyEntery_Click(object sender, EventArgs e)
         {
 
             form4.Show();
         }
 
-        private void gunaCheckBox1_CheckedChanged(object sender, EventArgs e)
+        private void CheckBoxUser_CheckedChanged(object sender, EventArgs e)
         {
             string pathRecord = @"Masters.txt";
             using (StreamWriter stream = new StreamWriter(pathRecord, true))
@@ -107,7 +107,7 @@ namespace BeautyRoom
             
         }
 
-        private void gunaButton3_Click(object sender, EventArgs e)
+        private void ButtonExit_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }

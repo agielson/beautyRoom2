@@ -25,7 +25,7 @@ namespace BeautyRoom
         string path = @"User.txt";
         string admin = @"Admin.txt";
 
-        private void gunaButton1_Click(object sender, EventArgs e)
+        private void gunaButtonEnter_Click(object sender, EventArgs e)
         {
 
             string name = NameTextBox.Text;
@@ -89,10 +89,7 @@ namespace BeautyRoom
 
         }
 
-        private void gunaTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void SignUpButton_Click(object sender, EventArgs e)
         {
@@ -105,11 +102,6 @@ namespace BeautyRoom
             }
         }
 
-        private void NumberTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
+        
     }
 }

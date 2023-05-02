@@ -88,7 +88,7 @@
             this.gunaCheckBox1.Size = new System.Drawing.Size(159, 20);
             this.gunaCheckBox1.TabIndex = 21;
             this.gunaCheckBox1.Text = "Подтвердите запись";
-            this.gunaCheckBox1.CheckedChanged += new System.EventHandler(this.gunaCheckBox1_CheckedChanged);
+            this.gunaCheckBox1.CheckedChanged += new System.EventHandler(this.CheckBoxUser_CheckedChanged);
             // 
             // gunaPanel2
             // 
@@ -251,7 +251,7 @@
             this.gunaButton4.TabIndex = 10;
             this.gunaButton4.Text = "Каталог записей";
             this.gunaButton4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton4.Click += new System.EventHandler(this.gunaButton4_Click);
+            this.gunaButton4.Click += new System.EventHandler(this.ButtonShowInf_Click);
             // 
             // gunaButton3
             // 
@@ -276,7 +276,7 @@
             this.gunaButton3.TabIndex = 9;
             this.gunaButton3.Text = "Выйти";
             this.gunaButton3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton3.Click += new System.EventHandler(this.gunaButton3_Click);
+            this.gunaButton3.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
             // gunaButton2
             // 
@@ -301,7 +301,7 @@
             this.gunaButton2.TabIndex = 8;
             this.gunaButton2.Text = "Записаться";
             this.gunaButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton2.Click += new System.EventHandler(this.gunaButton2_Click);
+            this.gunaButton2.Click += new System.EventHandler(this.ButtonWriteInUser_Click);
             // 
             // gunaButton1
             // 
@@ -326,7 +326,7 @@
             this.gunaButton1.TabIndex = 7;
             this.gunaButton1.Text = "Мои записи";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
+            this.gunaButton1.Click += new System.EventHandler(this.ButtonMyEntery_Click);
             // 
             // gunaLabel1
             // 
@@ -349,7 +349,7 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(733, 383);
             this.dataGridView2.TabIndex = 1;
-            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewInTable_CellClick);
             // 
             // Form2
             // 
@@ -363,7 +363,7 @@
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BeutyRoom";
-            this.Load += new System.EventHandler(this.Form2_Load);
+            this.Load += new System.EventHandler(this.ShowTable_Load);
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

@@ -19,7 +19,7 @@ namespace BeautyRoom
         }
 
         DataTable table = new DataTable();
-        private void Form4_Load(object sender, EventArgs e)
+        private void FormUserEntury_Load(object sender, EventArgs e)
         {
             table.Columns.Add("№", typeof(int));
             table.Columns.Add("Услуга", typeof(string));
@@ -30,7 +30,7 @@ namespace BeautyRoom
             dataGridView2.DataSource = table;
         }
 
-        private void gunaButton1_Click(object sender, EventArgs e)
+        private void gunaButtonShowInf_Click(object sender, EventArgs e)
         {
             string pathRecord = @"records.txt";
             string[] lines = File.ReadAllLines(pathRecord);
@@ -50,9 +50,6 @@ namespace BeautyRoom
             }
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
     }
 }

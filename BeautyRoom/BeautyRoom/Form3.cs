@@ -31,52 +31,16 @@ namespace BeautyRoom
             Hide();
         }
 
-        private void gunaShadowPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-
-        }
-
-
-        private void gunaButton3_Click(object sender, EventArgs e)
+       
+        private void ButtonAdd_Click(object sender, EventArgs e)
         {
             DataGridViewRow newRow;
             table.Rows.Add(textBoxId.Text,textBoxName.Text,textBoxMaster.Text,textBoxPrise.Text,textBoxDate.Text);
             dataGridView1.DataSource = table;
         }
-        /* private void conteiner(object _form) {
-             if(gunaPanel3.Controls.Count>0) gunaPanel3.Controls.Clear();
-             Form fm = _form as Form;
-             fm.TopLevel = false;
-             fm.FormBorderStyle = FormBorderStyle.None;
-             fm.Dock = DockStyle.Fill;
-             gunaPanel3.Controls.Add(fm);
-             gunaPanel3.Tag = fm;
-             fm.Show();
-         }*/
+        
 
-        private void gunaButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-        /* private void conteiner2(object _form)
-         {
-             if (gunaPanel3.Controls.Count > 0) gunaPanel3.Controls.Clear();
-             Form fm = _form as Form;
-             fm.TopLevel = false;
-             fm.FormBorderStyle = FormBorderStyle.None;
-             fm.Dock = DockStyle.Fill;
-             gunaPanel3.Controls.Add(fm);
-             gunaPanel3.Tag = fm;
-             fm.Show();
-         }*/
-
-        private void gunaButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form3_Load(object sender, EventArgs e)
+        private void FormAdmin_Load(object sender, EventArgs e)
         {
             table.Columns.Add("Id", typeof(int));
             table.Columns.Add("Название", typeof(string));
@@ -102,10 +66,7 @@ namespace BeautyRoom
 
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
@@ -115,7 +76,7 @@ namespace BeautyRoom
 
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewSelect_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             selectedRow = e.RowIndex;
             DataGridViewRow row = dataGridView1.Rows[selectedRow];
@@ -152,6 +113,8 @@ namespace BeautyRoom
             writer.Close();
             MessageBox.Show("Данные сохранены"); 
         }
+
+       
     }
     }
     

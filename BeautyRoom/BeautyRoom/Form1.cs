@@ -16,10 +16,10 @@ namespace BeautyRoom
         public Form1()
         {
             InitializeComponent();
-            form2 = new Form2();
+            form2 = new BeautyRoom();
             form3 = new Form3();
         }
-        Form2 form2;
+        BeautyRoom form2;
         Form3 form3;
 
         private void Form1_Load(object sender, EventArgs e)

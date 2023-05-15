@@ -12,9 +12,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BeautyRoom
 {
-    public partial class Form2 : Form
+    public partial class BeautyRoom : Form
     {
-        public Form2()
+        public BeautyRoom()
         {
             InitializeComponent();
             form4 = new Form4();

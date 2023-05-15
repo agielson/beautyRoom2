@@ -1,6 +1,6 @@
 ﻿namespace BeautyRoom
 {
-    partial class Form2
+    partial class BeautyRoom
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BeautyRoom));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.gunaCheckBox1 = new Guna.UI.WinForms.GunaCheckBox();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
@@ -347,7 +347,7 @@
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // Form2
+            // BeautyRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -356,9 +356,9 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gunaPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form2";
+            this.Name = "BeautyRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "BeautyRoom";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();

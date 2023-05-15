@@ -43,6 +43,7 @@
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel2_top = new Guna.UI.WinForms.GunaPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel1.SuspendLayout();
             this.gunaPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
@@ -67,6 +68,7 @@
             // gunaPanel2
             // 
             this.gunaPanel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.gunaPanel2.Controls.Add(this.gunaButton1);
             this.gunaPanel2.Controls.Add(this.showButton);
             this.gunaPanel2.Controls.Add(this.saveButton);
             this.gunaPanel2.Controls.Add(this.deleteButton);
@@ -93,7 +95,7 @@
             this.showButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.showButton.Image = null;
             this.showButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.showButton.Location = new System.Drawing.Point(0, 189);
+            this.showButton.Location = new System.Drawing.Point(3, 179);
             this.showButton.Name = "showButton";
             this.showButton.OnHoverBaseColor = System.Drawing.Color.RosyBrown;
             this.showButton.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -102,7 +104,7 @@
             this.showButton.OnPressedColor = System.Drawing.Color.Black;
             this.showButton.Size = new System.Drawing.Size(270, 50);
             this.showButton.TabIndex = 11;
-            this.showButton.Text = "Показать Мастера";
+            this.showButton.Text = "Список услуг";
             this.showButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.showButton.Click += new System.EventHandler(this.showButton_Click);
             // 
@@ -119,7 +121,7 @@
             this.saveButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.saveButton.Image = null;
             this.saveButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.saveButton.Location = new System.Drawing.Point(-1, 445);
+            this.saveButton.Location = new System.Drawing.Point(-1, 423);
             this.saveButton.Name = "saveButton";
             this.saveButton.OnHoverBaseColor = System.Drawing.Color.RosyBrown;
             this.saveButton.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -128,7 +130,7 @@
             this.saveButton.OnPressedColor = System.Drawing.Color.Black;
             this.saveButton.Size = new System.Drawing.Size(270, 50);
             this.saveButton.TabIndex = 10;
-            this.saveButton.Text = "Сохранить Мастера";
+            this.saveButton.Text = "Сохранить Услугу";
             this.saveButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // deleteButton
@@ -144,7 +146,7 @@
             this.deleteButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.deleteButton.Image = null;
             this.deleteButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.deleteButton.Location = new System.Drawing.Point(-1, 362);
+            this.deleteButton.Location = new System.Drawing.Point(2, 340);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.OnHoverBaseColor = System.Drawing.Color.RosyBrown;
             this.deleteButton.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -153,7 +155,7 @@
             this.deleteButton.OnPressedColor = System.Drawing.Color.Black;
             this.deleteButton.Size = new System.Drawing.Size(270, 50);
             this.deleteButton.TabIndex = 9;
-            this.deleteButton.Text = "Удалить Мастера";
+            this.deleteButton.Text = "Удалить Услугу";
             this.deleteButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
@@ -161,7 +163,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("PMingLiU-ExtB", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(29, 125);
+            this.label2.Location = new System.Drawing.Point(31, 103);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(208, 37);
             this.label2.TabIndex = 8;
@@ -173,7 +175,7 @@
             this.gunaPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox2.Image")));
             this.gunaPictureBox2.Location = new System.Drawing.Point(75, 3);
             this.gunaPictureBox2.Name = "gunaPictureBox2";
-            this.gunaPictureBox2.Size = new System.Drawing.Size(106, 100);
+            this.gunaPictureBox2.Size = new System.Drawing.Size(103, 75);
             this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gunaPictureBox2.TabIndex = 7;
             this.gunaPictureBox2.TabStop = false;
@@ -192,7 +194,7 @@
             this.addButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.addButton.Image = null;
             this.addButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.addButton.Location = new System.Drawing.Point(-1, 272);
+            this.addButton.Location = new System.Drawing.Point(0, 254);
             this.addButton.Name = "addButton";
             this.addButton.OnHoverBaseColor = System.Drawing.Color.RosyBrown;
             this.addButton.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -201,7 +203,7 @@
             this.addButton.OnPressedColor = System.Drawing.Color.Black;
             this.addButton.Size = new System.Drawing.Size(270, 50);
             this.addButton.TabIndex = 1;
-            this.addButton.Text = "Добавить Мастера";
+            this.addButton.Text = "Добавить Услугу";
             this.addButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.addButton.Click += new System.EventHandler(this.gunaButton3_Click);
             // 
@@ -290,6 +292,7 @@
             // 
             // gunaPanel2_top
             // 
+            this.gunaPanel2_top.BackColor = System.Drawing.Color.WhiteSmoke;
             this.gunaPanel2_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaPanel2_top.Location = new System.Drawing.Point(272, 0);
             this.gunaPanel2_top.Name = "gunaPanel2_top";
@@ -299,12 +302,38 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(409, 149);
+            this.dataGridView1.Location = new System.Drawing.Point(354, 125);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(588, 296);
+            this.dataGridView1.Size = new System.Drawing.Size(685, 370);
             this.dataGridView1.TabIndex = 3;
+            // 
+            // gunaButton1
+            // 
+            this.gunaButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaButton1.AnimationSpeed = 0.03F;
+            this.gunaButton1.BaseColor = System.Drawing.Color.Maroon;
+            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gunaButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.gunaButton1.Image = null;
+            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton1.Location = new System.Drawing.Point(22, 513);
+            this.gunaButton1.Name = "gunaButton1";
+            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.RosyBrown;
+            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.WhiteSmoke;
+            this.gunaButton1.OnHoverImage = null;
+            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton1.Size = new System.Drawing.Size(217, 38);
+            this.gunaButton1.TabIndex = 12;
+            this.gunaButton1.Text = "Выйти";
+            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click_1);
             // 
             // Form3
             // 
@@ -347,5 +376,6 @@
         private Guna.UI.WinForms.GunaButton deleteButton;
         private Guna.UI.WinForms.GunaButton showButton;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private Guna.UI.WinForms.GunaButton gunaButton1;
     }
 }

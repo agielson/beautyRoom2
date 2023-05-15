@@ -15,14 +15,14 @@ namespace BeautyRoom
 {
     public partial class Form3 : Form
     {
-      
+
 
         public Form3()
         {
             InitializeComponent();
         }
         DataTable table = new DataTable();
-       
+
         private void Form3_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
@@ -87,29 +87,23 @@ namespace BeautyRoom
         {
             string[] lines = File.ReadAllLines("Masters.txt");
             string[] value;
-            for (int i = 0; i < lines.Length; i++) {
+            for (int i = 0; i < lines.Length; i++)
+            {
                 value = lines[i].ToString().Split('/');
-                string[] row= new string[value.Length];
-                for (int j = 0; j < value.Length; j++) {
+                string[] row = new string[value.Length];
+                for (int j = 0; j < value.Length; j++)
+                {
                     row[j] = value[j].Trim();
                 }
                 table.Rows.Add(row);
             }
 
         }
-       
 
-
-
-
-
-
-
-
-
-
-
-
+        private void gunaButton1_Click_1(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
-    }
-    
+}
+

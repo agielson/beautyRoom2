@@ -30,14 +30,14 @@ namespace BeautyRoom
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
-            this.NumberTextBox = new Guna.UI.WinForms.GunaTextBox();
+            this.NameTextBox = new Guna.UI.WinForms.GunaTextBox();
             this.PasswordTextBox = new Guna.UI.WinForms.GunaTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.LoginButton = new Guna.UI.WinForms.GunaButton();
             this.SignUpButton = new Guna.UI.WinForms.GunaButton();
-            this.NameTextBox = new Guna.UI.WinForms.GunaTextBox();
+            this.NumberTextBox = new Guna.UI.WinForms.GunaTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -53,23 +53,24 @@ namespace BeautyRoom
             this.gunaPictureBox1.TabIndex = 0;
             this.gunaPictureBox1.TabStop = false;
             // 
-            // NumberTextBox
+            // NameTextBox
             // 
-            this.NumberTextBox.BaseColor = System.Drawing.Color.White;
-            this.NumberTextBox.BorderColor = System.Drawing.Color.Silver;
-            this.NumberTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.NumberTextBox.FocusedBaseColor = System.Drawing.Color.White;
-            this.NumberTextBox.FocusedBorderColor = System.Drawing.Color.Maroon;
-            this.NumberTextBox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.NumberTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.NumberTextBox.Location = new System.Drawing.Point(67, 189);
-            this.NumberTextBox.Name = "NumberTextBox";
-            this.NumberTextBox.PasswordChar = '\0';
-            this.NumberTextBox.SelectedText = "";
-            this.NumberTextBox.Size = new System.Drawing.Size(258, 35);
-            this.NumberTextBox.TabIndex = 1;
-            this.NumberTextBox.Text = "Имя";
-            this.NumberTextBox.TextChanged += new System.EventHandler(this.NumberTextBox_TextChanged);
+            this.NameTextBox.BaseColor = System.Drawing.Color.White;
+            this.NameTextBox.BorderColor = System.Drawing.Color.Silver;
+            this.NameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NameTextBox.FocusedBaseColor = System.Drawing.Color.White;
+            this.NameTextBox.FocusedBorderColor = System.Drawing.Color.Maroon;
+            this.NameTextBox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.NameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.NameTextBox.Location = new System.Drawing.Point(67, 189);
+            this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.PasswordChar = '\0';
+            this.NameTextBox.SelectedText = "";
+            this.NameTextBox.Size = new System.Drawing.Size(258, 35);
+            this.NameTextBox.TabIndex = 1;
+            this.NameTextBox.Text = "Имя";
+            this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
+            this.NameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NameTextBox_KeyPress);
             // 
             // PasswordTextBox
             // 
@@ -87,6 +88,7 @@ namespace BeautyRoom
             this.PasswordTextBox.Size = new System.Drawing.Size(258, 35);
             this.PasswordTextBox.TabIndex = 2;
             this.PasswordTextBox.Text = "Пароль";
+            this.PasswordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PasswordTextBox_KeyPress);
             // 
             // label1
             // 
@@ -168,23 +170,24 @@ namespace BeautyRoom
             this.SignUpButton.Text = "Нет аккуанта? Зарегистрируйтесь";
             this.SignUpButton.Click += new System.EventHandler(this.SignUpButton_Click);
             // 
-            // NameTextBox
+            // NumberTextBox
             // 
-            this.NameTextBox.BaseColor = System.Drawing.Color.White;
-            this.NameTextBox.BorderColor = System.Drawing.Color.Silver;
-            this.NameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.NameTextBox.FocusedBaseColor = System.Drawing.Color.White;
-            this.NameTextBox.FocusedBorderColor = System.Drawing.Color.Maroon;
-            this.NameTextBox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.NameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.NameTextBox.Location = new System.Drawing.Point(67, 239);
-            this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.PasswordChar = '\0';
-            this.NameTextBox.SelectedText = "";
-            this.NameTextBox.Size = new System.Drawing.Size(258, 35);
-            this.NameTextBox.TabIndex = 11;
-            this.NameTextBox.Text = "Номер телефона";
-            this.NameTextBox.TextChanged += new System.EventHandler(this.gunaTextBox1_TextChanged);
+            this.NumberTextBox.BaseColor = System.Drawing.Color.White;
+            this.NumberTextBox.BorderColor = System.Drawing.Color.Silver;
+            this.NumberTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NumberTextBox.FocusedBaseColor = System.Drawing.Color.White;
+            this.NumberTextBox.FocusedBorderColor = System.Drawing.Color.Maroon;
+            this.NumberTextBox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.NumberTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.NumberTextBox.Location = new System.Drawing.Point(67, 239);
+            this.NumberTextBox.Name = "NumberTextBox";
+            this.NumberTextBox.PasswordChar = '\0';
+            this.NumberTextBox.SelectedText = "";
+            this.NumberTextBox.Size = new System.Drawing.Size(258, 35);
+            this.NumberTextBox.TabIndex = 11;
+            this.NumberTextBox.Text = "Номер телефона ";
+            this.NumberTextBox.TextChanged += new System.EventHandler(this.gunaTextBox1_TextChanged);
+            this.NumberTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumberTextBox_KeyPress);
             // 
             // Form1
             // 
@@ -192,14 +195,14 @@ namespace BeautyRoom
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(950, 519);
-            this.Controls.Add(this.NameTextBox);
+            this.Controls.Add(this.NumberTextBox);
             this.Controls.Add(this.SignUpButton);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.gunaPictureBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PasswordTextBox);
-            this.Controls.Add(this.NumberTextBox);
+            this.Controls.Add(this.NameTextBox);
             this.Controls.Add(this.gunaPictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -218,14 +221,14 @@ namespace BeautyRoom
         #endregion
 
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
-        private Guna.UI.WinForms.GunaTextBox NumberTextBox;
+        private Guna.UI.WinForms.GunaTextBox NameTextBox;
         private Guna.UI.WinForms.GunaTextBox PasswordTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox2;
         private Guna.UI.WinForms.GunaButton LoginButton;
         private Guna.UI.WinForms.GunaButton SignUpButton;
-        private Guna.UI.WinForms.GunaTextBox NameTextBox;
+        private Guna.UI.WinForms.GunaTextBox NumberTextBox;
     }
 }
 

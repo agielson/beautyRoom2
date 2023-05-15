@@ -16,20 +16,53 @@ namespace BeautyRoom
         public Form1()
         {
             InitializeComponent();
-            mainWindow = new MainWindow();
+            form2 = new Form2();
             form3 = new Form3();
         }
-        MainWindow mainWindow;
+        Form2 form2;
         Form3 form3;
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            NumberTextBox.MaxLength = 11;
+            PasswordTextBox.MaxLength = 6;
+        }
+        private void NameTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char text = e.KeyChar;
+            if (!Char.IsLetter(text) && text != 8)
+            {
+                e.Handled = true;
+            }
+        }
+        public void NumberTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            NumberTextBox.MaxLength = 11;
+            char number1 = e.KeyChar;
+            if (!Char.IsDigit(number1) && (number1 <= 47 || number1 >= 58)  && number1 != 8)
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        public void PasswordTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            PasswordTextBox.MaxLength = 6;
+            char number2 = e.KeyChar;
+            if (!Char.IsDigit(number2) && (number2 <= 47 || number2 >= 58) && number2 != 8)
+            {
+                e.Handled = true;
+            }
+        }
         string path = @"User.txt";
         string admin = @"Admin.txt";
         
         private void gunaButton1_Click(object sender, EventArgs e)
         {
        
-            string name = NameTextBox.Text;
-            string number = NumberTextBox.Text;
+            string name = NumberTextBox.Text;
+            string number = NameTextBox.Text;
             string password = PasswordTextBox.Text;
             bool correctName = false;
             bool correctNumber = false;
@@ -79,7 +112,7 @@ namespace BeautyRoom
 
             if (correctName == true && correctNumber == true && correctPassword == true)
             {
-                mainWindow.Show(); ;
+                form2.Show(); ;
             }
 
             else if (correctName == false &&  correctNumber == false && correctPassword == false)
@@ -96,23 +129,28 @@ namespace BeautyRoom
 
         private void SignUpButton_Click(object sender, EventArgs e)
         {
-            using (StreamWriter stream = new StreamWriter(path, true))
+            if(NumberTextBox.TextLength == 11 && PasswordTextBox.TextLength == 6)
             {
-                stream.WriteLine(NameTextBox.Text);
-                stream.WriteLine(NumberTextBox.Text);
-                stream.WriteLine(PasswordTextBox.Text);
-                MessageBox.Show("Данные успешно сохранены!", "Регистрация");
+                using (StreamWriter stream = new StreamWriter(path, true))
+                {
+                    stream.WriteLine(NameTextBox.Text);
+                    stream.WriteLine(NumberTextBox.Text);
+                    stream.WriteLine(PasswordTextBox.Text);
+                    MessageBox.Show("Данные успешно сохранены!", "Регистрация");
+                }
             }
+            else
+            {
+                MessageBox.Show("Введите корректные данные! Номер телефона состоит из 11 символов, а пароль из 6! ", "Ошибка входа");
+            }
+           
+
         }
 
-        private void NumberTextBox_TextChanged(object sender, EventArgs e)
+        private void NameTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

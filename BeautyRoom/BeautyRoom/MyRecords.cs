@@ -11,9 +11,9 @@ using System.IO;
 
 namespace BeautyRoom
 {
-    public partial class Form4 : Form
+    public partial class MyRecords : Form
     {
-        public Form4()
+        public MyRecords()
         {
             InitializeComponent();
         }
@@ -27,10 +27,10 @@ namespace BeautyRoom
             table.Columns.Add("Цена", typeof(string));
             table.Columns.Add("Дата", typeof(string));
 
-            dataGridView2.DataSource = table;
+            dataGridView1.DataSource = table;
         }
 
-        private void gunaButtonShowInf_Click(object sender, EventArgs e)
+        private void ButtonShowInf_Click(object sender, EventArgs e)
         {
             string pathRecord = @"records.txt";
             string[] lines = File.ReadAllLines(pathRecord);
@@ -50,6 +50,10 @@ namespace BeautyRoom
             }
         }
 
-        
+        private void Form4_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            Hide();
+        }
     }
 }

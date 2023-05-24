@@ -47,3 +47,9 @@ C:\Users\Галия\source\repos\beautyRoom2.0\BeautyRoom\BeautyRoom\obj\Debug\B
 C:\Users\Галия\source\repos\beautyRoom2.0\BeautyRoom\BeautyRoom\obj\Debug\BeautyRoom.User.resources
 C:\Users\Галия\source\repos\beautyRoom2.0\BeautyRoom\BeautyRoom\obj\Debug\BeautyRoom.Admin.resources
 C:\Users\Галия\source\repos\beautyRoom2.0\BeautyRoom\BeautyRoom\obj\Debug\BeautyRoom.MyRecords.resources
+C:\Users\Галия\source\repos\beautyRoom2.0\BeautyRoom\BeautyRoom\bin\Debug\BeautyRoom.exe.manifest
+C:\Users\Галия\source\repos\beautyRoom2.0\BeautyRoom\BeautyRoom\bin\Debug\BeautyRoom.application
+C:\Users\Галия\source\repos\beautyRoom2.0\BeautyRoom\BeautyRoom\obj\Debug\BeautyRoom.exe.manifest
+C:\Users\Галия\source\repos\beautyRoom2.0\BeautyRoom\BeautyRoom\obj\Debug\BeautyRoom.application
+C:\Users\Галия\source\repos\beautyRoom2.0\BeautyRoom\BeautyRoom\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Галия\source\repos\beautyRoom2.0\BeautyRoom\BeautyRoom\obj\Debug\BeautyRoom.csproj.Fody.CopyLocal.cache
